@@ -3,6 +3,12 @@ source "libs/functions.sh"
 source "libs/variable.sh"
 
 
+cwindow
+cat ./scene/003.txt
+waittime 2000
+
+exit 1;
+
 # 199X
 cwindow
 linebreak 2
@@ -42,7 +48,20 @@ linebreak;tab;
 wPrintln $SCRIPT_WAIT "STZ";  tab; wPrintln $SCRIPT_WAIT "NMTIME"; linebreak;tab;
 wPrintln $SCRIPT_WAIT "LDA";  tab; wPrintln $SCRIPT_WAIT "#BLANKING"; linebreak;tab;
 wPrintln $SCRIPT_WAIT "STA";  tab; wPrintln $SCRIPT_WAIT "INIDSP"; linebreak;tab;
-wPrintln $SCRIPT_WAIT "BJSR"; tab; wPrintln $SCRIPT_WAIT "ATLUS"; linebreak;tab;
+wPrintln $SCRIPT_WAIT "BJSR"; tab; wPrintln $SCRIPT_WAIT "AT";
+
+# 差し込みシーン２
+cwindow
+cat ./scene/003.txt
+waittime 2000
+
+# 復帰
+cwindow
+cat ./buffer/002.txt
+/bin/echo -n "	BJSR	AT";
+wPrintln $SCRIPT_WAIT "LUS"; linebreak;tab;
+
+exit 1;
 
 for txt in "'EL" "ELOHIM" "ELOHO" "ELOHIM" "SEBADTH'"; do
     wPrintln $SCRIPT_WAIT $txt;
