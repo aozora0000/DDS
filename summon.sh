@@ -4,10 +4,9 @@ source "libs/variable.sh"
 
 
 cwindow
-cat ./scene/003.txt
+source ./scene/003.txt
 waittime 2000
-
-exit 1;
+exit 1
 
 # 199X
 cwindow
@@ -52,7 +51,7 @@ wPrintln $SCRIPT_WAIT "BJSR"; tab; wPrintln $SCRIPT_WAIT "AT";
 
 # 差し込みシーン２
 cwindow
-cat ./scene/003.txt
+source ./scene/003.txt
 waittime 2000
 
 # 復帰
@@ -60,8 +59,6 @@ cwindow
 cat ./buffer/002.txt
 /bin/echo -n "	BJSR	AT";
 wPrintln $SCRIPT_WAIT "LUS"; linebreak;tab;
-
-exit 1;
 
 for txt in "'EL" "ELOHIM" "ELOHO" "ELOHIM" "SEBADTH'"; do
     wPrintln $SCRIPT_WAIT $txt;
@@ -139,9 +136,7 @@ linebreak 25 200;
 
 sleep 2
 animation $SCRIPT_WAIT $RED "./logo/*"
-linebreak 2;
+linebreak 4;
 /bin/echo -n "                                                     PRESS ANY BUTTON"
-linebreak 2;
-echo -e "                                                __    \033[34m/┃\033[m \033[31m ━━━━━\033[m \033[34m ┃     ┃  ┃ ┏━━━\033[m"
-echo -e "                                               (Ｃ)  \033[34m/-┃\033[m \033[31m   ┃  \033[m \033[34m ┃     ┃  ┃ ┗━━┓\033[m"
-echo -e "                                                ~~  \033[34m/  ┃\033[m \033[31m   ┃  \033[m \033[34m ┗━━   ┗━━┃ ━━━┛\033[m"
+linebreak 3;
+source ./scene/999.txt
