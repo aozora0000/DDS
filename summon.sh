@@ -2,18 +2,11 @@
 source "libs/functions.sh"
 source "libs/variable.sh"
 
-
-cwindow
-source ./scene/003.txt
-waittime 2000
-exit 1
-
 # 199X
 cwindow
 linebreak 2
 cat ./scene/001.txt
 sleep 4
-
 
 # スクリプトレンダリングスタート
 cwindow

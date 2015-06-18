@@ -1,9 +1,12 @@
 # PS版 真・女神転生のOPムービーをzshで再現したいだけの人生だった
 
-[![youtubeへ](http://img.youtube.com/vi/D0GViDfB4Js/0.jpg)](https://www.youtube.com/watch?v=D0GViDfB4Js)
+## 注意
+著しくクオリティは低いです
+
+[![youtubeへ](http://img.youtube.com/vi/QOP-Ww5hfNA/0.jpg)](https://www.youtube.com/watch?v=QOP-Ww5hfNA)
 
 ## TODO
-- OP差し込み画像作成
+- OP差し込み３作成
 
 ## 概要
 
