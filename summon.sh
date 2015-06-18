@@ -2,6 +2,11 @@
 source "libs/functions.sh"
 source "libs/variable.sh"
 
+cwindow
+cat ./scene/004.txt
+waittime 2000
+exit 1;
+
 # 199X
 cwindow
 linebreak 2
@@ -10,7 +15,7 @@ sleep 4
 
 # スクリプトレンダリングスタート
 cwindow
-linebreak 2
+linebreak 1
 
 wPrintln $SCRIPT_WAIT "RESET:"
 
@@ -59,11 +64,27 @@ for txt in "'EL" "ELOHIM" "ELOHO" "ELOHIM" "SEBADTH'"; do
 done;
 linebreak;tab;
 
-for txt in "'ELION" "EIECH" "ADIER" "EIECH" "ADONAI'"; do
+for txt in "'ELION" "EIECH" "ADIER" "EI"; do
     wPrintln $SCRIPT_WAIT $txt;
     space;
 done
-linebreak;tab;
+
+# 差し込みシーン３
+cwindow
+cat ./scene/004.txt
+waittime 2000
+
+# 復帰
+cwindow
+cat ./buffer/003.txt
+/bin/echo -n "	'ELION EIECH ADIER EI";
+for txt in "ECH" "ADONAI'"; do
+    wPrintln $SCRIPT_WAIT $txt;
+    space;
+done
+
+exit 1;
+
 
 for txt in "'JAH" "SADAI" "TETRAGRAMMATON" "SADAI'"; do
     wPrintln $SCRIPT_WAIT $txt;
